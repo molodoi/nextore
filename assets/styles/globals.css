@@ -1,0 +1,44 @@
+@import "tailwindcss";
+
+/* ✅ Optional: your custom CSS below */
+@layer utilities {
+    .wrapper {
+        @apply max-w-7xl w-full p-5;
+    }
+
+    @media (min-width: 768px) {
+        .wrapper {
+            @apply px-10;
+        }
+    }
+
+    @media (min-width: 1024px) {
+        .wrapper {
+            @apply mx-auto;
+        }
+    }
+
+    .flex-start {
+        @apply flex justify-start items-center;
+    }
+
+    .flex-center {
+        @apply flex justify-center items-center;
+    }
+
+    .flex-between {
+        @apply flex justify-between items-center;
+    }
+
+    .h1-bold {
+        @apply font-bold text-3xl lg:text-4xl;
+    }
+
+    .h2-bold {
+        @apply font-bold text-2xl lg:text-3xl;
+    }
+
+    .h3-bold {
+        @apply font-bold text-xl lg:text-2xl;
+    }
+}
