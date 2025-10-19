@@ -17,11 +17,16 @@ export function ModeToggle() {
 
     const [mounted, setMounted] = useState(false);
     const { theme, setTheme } = useTheme();
+    // N’affiche rien tant que le composant n’est pas monté côté client.
     useEffect(() => {
         setMounted(true);
     }, []);
     if (!mounted) {
-        return null;
+        return (
+            <Button variant="ghost" disabled>
+                <SunMoon className="opacity-50" />
+            </Button>
+        );
     }
 
     return (
